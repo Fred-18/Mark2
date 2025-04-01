@@ -8,8 +8,5 @@ public class Main {
 
   public static void main(String[] args) {
     Human humain = new Human("fred", 24, "M", 100, 0);
-    String name = humain.getName();
-
-    System.out.println(name);
   }
 }
