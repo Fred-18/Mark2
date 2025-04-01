@@ -1,7 +1,7 @@
 package org.example.Humanoide;
 
 public interface Behavior {
-  String speak(String name);
+  String speak();
 
   String drink();
 
