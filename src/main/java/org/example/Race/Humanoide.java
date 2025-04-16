@@ -15,7 +15,6 @@ public abstract class Humanoide {
     }
 
 
-
     public Humanoide(String name, int age, String gender, int hp, int mp, int attP, int defP, int speed) {
         this.name = name;
         this.age = age;
@@ -58,6 +57,38 @@ public abstract class Humanoide {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public int getMagicPoint() {
+        return magicPoint;
+    }
+
+    public void setMagicPoint(int magicPoint) {
+        this.magicPoint = magicPoint;
     }
 
 
