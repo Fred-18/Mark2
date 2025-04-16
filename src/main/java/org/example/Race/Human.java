@@ -12,24 +12,31 @@ public class Human extends Humanoide implements Behavior, Warrior {
 
     @Override
     public String speak(String name) {
-        return "I am a human my name is " + name;
+        return "I am a human my name is " + getName();
     }
 
     @Override
-    public String drink() {
-        return "Drink human potion";
+    public String drink(int value) {
+        int currentHealthPoints = getHealthPoint();
+        if (currentHealthPoints < 0) {
+            return "The caractere is already dead !!!";
+        }
+        currentHealthPoints += value;
+
+        return getName() + " : Say i feel much better  " + currentHealthPoints + " hp +";
     }
 
     @Override
-    public String escape() {
-        return null;
-    }
+    public String eat(int value) {
+        int currentHealthPoints = getHealthPoint();
+        if (currentHealthPoints < 0) {
+            return "The caractere is already dead !!!";
+        }
+        currentHealthPoints += value;
 
-    @Override
-    public String eat() {
-        return null;
+        return getName() + " : Huuuuuum Yummy food " + currentHealthPoints + " hp +";
 
-
+        // todo redondance au niveau des methodes voir dans un refacto un condition switch
     }
 
     @Override
@@ -45,9 +52,10 @@ public class Human extends Humanoide implements Behavior, Warrior {
     }
 
     @Override
-    public void bigAttack(Humanoide humanoide, int attP) {
-        int currentAttackPoints = humanoide.getAttackPoint();
-        humanoide.setAttackPoint(currentAttackPoints * 2);
-        //todo methode a revoir
+    public void bigAttack(Humanoide humanoide, int attp) {
+        int currentAttackPoints = getAttackPoint() * attp;
+        System.out.println(currentAttackPoints);
+        int currentHealthPoints = humanoide.getHealthPoint();
+        humanoide.setHealthPoint(currentHealthPoints -= currentAttackPoints);
     }
 }
