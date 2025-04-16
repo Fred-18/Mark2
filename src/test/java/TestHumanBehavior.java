@@ -1,4 +1,4 @@
-import org.example.Race.Human;
+
 import org.junit.jupiter.api.Test;
 
 public class TestHumanBehavior {
