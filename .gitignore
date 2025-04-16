@@ -1,0 +1,29 @@
+# === Gradle ===
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# === IntelliJ IDEA ===
+*.iml
+.idea/
+out/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Logs ===
+*.log
+
+# === Kotlin ===
+*.class
+*.kt~
+*.kts~
+
+# === Java ===
+*.class
+
+# === Cache, autres ===
+*.swp
+*.lock

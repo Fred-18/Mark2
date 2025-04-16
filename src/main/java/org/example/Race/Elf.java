@@ -3,7 +3,7 @@ package org.example.Race;
 public class Elf extends Humanoide implements Behavior {
 
     public Elf(String name, int age, String gender, int hp, int mp) {
-        super(name, age, gender, hp, mp);
+        //super(name, age, gender, hp, mp);
     }
 
     @Override
