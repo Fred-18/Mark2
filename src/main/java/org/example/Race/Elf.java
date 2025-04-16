@@ -12,17 +12,13 @@ public class Elf extends Humanoide implements Behavior {
     }
 
     @Override
-    public String drink() {
+    public String drink(int value) {
         return "";
     }
 
-    @Override
-    public String escape() {
-        return "";
-    }
 
     @Override
-    public String eat() {
+    public String eat(int value) {
         return "";
     }
 }
